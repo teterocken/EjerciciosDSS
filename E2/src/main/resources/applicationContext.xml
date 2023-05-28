@@ -1,0 +1,12 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="questFactory" class="es.uca.dss.QuestFactory" />
+
+    <bean id="knight" class="es.uca.dss.KnightOfTheRoundTable">
+        <property name="name" value="Sir Lancelot" />
+        <property name="quest" ref="questFactory" />
+    </bean>
+</beans>
